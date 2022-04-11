@@ -4,4 +4,4 @@ Course by [WesBos](https://courses.wesbos.com). The goal is to learn JavaScript 
 
 I'll be updating here as I go through the course, and hope it shows my development (pun intended) as I learn.
 
-Credits for the [`base.css`](./base.css) file and the [`htmlbase.json`](./htmlbase.json) snippet go to Wes Bos.
+Credits for the [`base.css`](./base.css) file and the [`htmlbase.json`](./htmlbase.json) snippet go to Wes Bos. The official course repo can be found on [Github](https://github.com/wesbos/beginner-javascript).
