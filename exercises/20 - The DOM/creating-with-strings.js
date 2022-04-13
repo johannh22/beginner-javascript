@@ -1,4 +1,4 @@
-const item = document.querySelector('.item');
+// const item = document.querySelector('.item');
 
 const src = `https://picsum.photos/200`;
 const desc = `Cute Pup <img onload="alert('HACKED')" src="https://picsum.photos/50"/>`;
