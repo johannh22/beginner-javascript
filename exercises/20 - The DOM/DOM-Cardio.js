@@ -78,23 +78,45 @@ p1.remove();
 //   <p>They are HEIGHT and AGE years old. In Dog years this person would be AGEINDOGYEARS. That would be a tall dog!</p>
 // </div>
 
-const generatePlayerCard = (name, age, height) => `
-    <div class="playerCard">
+const generatePlayerCard = (name, age, height) => {
+  const cardHTML = `
       <h2>${name} - ${age}</h2>
       <p>They are ${height} and ${age} years old. In Dog years this person would be ${
-  age * 7
-}. That would be a tall dog!</p>
-    </div>
+    age * 7
+  }. That would be a tall dog!</p>
+    <button class="remove">Remove</button>
   `;
+  const div = document.createElement('div');
+  div.classList.add('playerCard');
+  div.innerHTML = cardHTML;
+  return div;
+};
 
 // make a new div with a class of cards
+const divCards = document.createElement('div');
+divCards.classList.add('cards');
 
 // make 4 player cards using generatePlayerCard
+const player1 = generatePlayerCard('jojo', 23, 177);
+const player2 = generatePlayerCard('lulu', 23, 164);
+const player3 = generatePlayerCard('messi', 35, 170);
+const player4 = generatePlayerCard('midoriya', 16, 172);
 
 // append those cards to the div
+divCards.append(player1);
+divCards.append(player2);
+divCards.append(player3);
+divCards.append(player4);
+
 // put the div into the DOM just before the wrapper element
+wrapper.insertAdjacentElement('beforebegin', divCards);
+
 // Bonus, put a delete Button on each card so when you click it, the whole card is removed
 
 // select all the buttons!
 // make out delete function
 // loop over them and attach a listener
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+  button.addEventListener('click', () => button.parentElement.remove());
+});
