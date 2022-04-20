@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Intervals and Timers</title>
+    <link rel="stylesheet" href="../base.css">
+</head>
+
+<body>
+    <script>
+        // function buzzer() {
+        //   console.log('ENGGGGGGG');
+        // }
+
+        // console.log('Starting');
+        // setTimeout(buzzer, 500);
+        // console.log('Finishing');
+
+        // setInterval(buzzer, 2000);
+
+        // function setImmediateInterval(funcToRun, ms) {
+        //   // right away call the function
+        //   funcToRun();
+        //   // run a regular interval
+        //   return setInterval(funcToRun, ms);
+        // }
+
+        // setImmediateInterval(() => console.log('HIIII'), 2000);
+
+        const poopInterval = setInterval(() => {
+          console.log('💩');
+          console.log('Hehehe');
+        }, 100);
+
+        setTimeout(() => {
+          clearInterval(poopInterval);
+        }, 3000);
+    </script>
+</body>
+
+</html>
