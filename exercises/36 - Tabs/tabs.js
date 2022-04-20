@@ -1,4 +1,3 @@
-const tabs = document.querySelector('.tabs');
 const tabButtons = document.querySelectorAll('[role="tab"');
 const tabPanels = Array.from(document.querySelectorAll('[role="tabpanel"'));
 
