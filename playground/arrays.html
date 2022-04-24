@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0">
+ <title>Arrays</title>
+ <link rel="stylesheet" href="../base.css">
+</head>
+<body>
+  <script>
+    // mutable method
+    // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    // console.log(numbers);
+    // const numbersBackwards = numbers.reverse();
+    // console.log(numbersBackwards);
+    // console.log(numbers);
+
+    // immutable method
+    // const pizzaSlice = numbers.slice(2, 4);
+    // console.log(pizzaSlice);
+    // console.log(numbers);
+
+    // creating copies
+    // const numbersReversed = [...numbers].reverse();
+    // console.log(numbersReversed);
+    // console.log(numbers);
+
+    const names = ['jojo', 'wes', 'kait', 'snickers'];
+    // names.push('lux');
+    // console.log(names);
+    // const names2 = [...names, 'lux'];
+    const kaitIndex = names.findIndex((name) => name === 'kait');
+
+    console.log(kaitIndex);
+    console.log(names[kaitIndex]);
+  </script>
+</body>
+</html>
