@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Event Loop</title>
+  <title>Promises Chain</title>
   <link rel="stylesheet" href="../base.css">
 </head>
 
@@ -73,7 +73,27 @@
         });
     }
 
-    go.addEventListener('click', animate);
+    async function animate2(e) {
+      const el = e.currentTarget;
+      el.textContent = 'GO!';
+      // Make it a circle after 0.2 seconds
+      await wait(200);
+      el.classList.add('circle');
+      await wait(500);
+      // Make it red after 0.5s
+      el.classList.add('red');
+      await wait(250);
+      // Make it square after 0.25s
+      el.classList.remove('circle');
+      await wait(300);
+      // Make it purple after 0.3s
+      el.classList.add('purple');
+      await wait(500);
+      // Fade out after 0.5s
+      el.classList.add('fadeOut');
+    }
+
+    go.addEventListener('click', animate2);
     go.addEventListener('clickXXXX', (e) => {
       const el = e.currentTarget;
       el.textContent = 'GO!';
